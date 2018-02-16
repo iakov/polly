@@ -1,6 +1,6 @@
 # Copyright (c) 2017, Ruslan Baratov
 # All rights reserved.
-
+CMAKE_POLICY(SET CMP0006 OLD)
 if(DEFINED POLLY_IOS_NOCODESIGN_11_2_DEP_9_0_BITCODE_CMAKE_)
   return()
 else()
