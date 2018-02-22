@@ -36,8 +36,8 @@ set(CMAKE_MACOSX_BUNDLE YES)
 include("${CMAKE_CURRENT_LIST_DIR}/flags/ios_nocodesign.cmake")
 
 set(IPHONEOS_ARCHS armv7;arm64)
-#set(IPHONESIMULATOR_ARCHS "")
-set(IPHONESIMULATOR_ARCHS x86_64)
+set(IPHONESIMULATOR_ARCHS "")
+#set(IPHONESIMULATOR_ARCHS x86_64)
 
 include("${CMAKE_CURRENT_LIST_DIR}/compiler/xcode.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/os/iphone.cmake")
