@@ -441,7 +441,7 @@ build_command.append('--')
 
 if args.iossim:
   build_command.append('-arch')
-  build_command.append('i386')
+  build_command.append('x86_64')
   build_command.append('-sdk')
   build_command.append('iphonesimulator')
 
