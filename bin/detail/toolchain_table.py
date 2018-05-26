@@ -330,6 +330,12 @@ if os.name == 'nt':
           vs_version='15'
       ),
       Toolchain(
+          'vs-15-2017-win64-z7',
+          'Visual Studio 15 2017 Win64',
+          arch='amd64',
+          vs_version='15'
+      ),
+      Toolchain(
           'android-vc-ndk-r10e-api-19-arm-clang-3-6',
           'Visual Studio 14 2015 ARM',
           arch='',
@@ -370,6 +376,7 @@ if platform.system() == 'Linux':
       Toolchain('linux-mingw-w32', 'Unix Makefiles'),
       Toolchain('linux-mingw-w64', 'Unix Makefiles'),
       Toolchain('linux-mingw-w64-cxx98', 'Unix Makefiles'),
+      Toolchain('linux-mingw-w64-gnuxx11', 'Unix Makefiles'),
       Toolchain('linux-gcc-armhf', 'Unix Makefiles'),
       Toolchain('linux-gcc-armhf-neon', 'Unix Makefiles'),
       Toolchain('linux-gcc-armhf-neon-vfpv4', 'Unix Makefiles'),
@@ -379,6 +386,7 @@ if platform.system() == 'Linux':
 if platform.system() == 'Darwin':
   toolchain_table += [
       Toolchain('ios', 'Xcode'),
+      Toolchain('ios-11-3-dep-9-0-arm64', 'Xcode', ios_version='11.3'),
       Toolchain('ios-11-3-dep-9-0-device-bitcode-cxx11', 'Xcode', ios_version='11.3'),
       Toolchain('ios-11-2-dep-9-0-device-bitcode-cxx11', 'Xcode', ios_version='11.2'),
       Toolchain('ios-11-2-dep-9-3-arm64-armv7', 'Xcode', ios_version='11.2'),
@@ -579,6 +587,7 @@ if os.name == 'posix':
       Toolchain('gcc-pic-hid-sections', 'Unix Makefiles'),
       Toolchain('gcc-pic-hid-sections-lto', 'Unix Makefiles'),
       Toolchain('gcc-5-pic-hid-sections-lto', 'Unix Makefiles'),
+      Toolchain('gcc-5-pic-hid-sections', 'Unix Makefiles'),
       Toolchain('gcc-5', 'Unix Makefiles'),
       Toolchain('gcc-5-cxx14-c11', 'Unix Makefiles'),
       Toolchain('gcc-6-32bit-cxx14', 'Unix Makefiles'),
