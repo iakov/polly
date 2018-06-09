@@ -156,7 +156,12 @@ toolchain_table = [
     Toolchain('android-ndk-r16b-api-24-armeabi-v7a-neon-clang-libcxx', 'Unix Makefiles'),
     Toolchain('android-ndk-r16b-api-24-armeabi-v7a-neon-clang-libcxx14', 'Unix Makefiles'),
     Toolchain('android-ndk-r17-api-24-arm64-v8a-clang-libcxx14', 'Unix Makefiles'),
+    Toolchain('android-ndk-r17-api-21-arm64-v8a-neon-clang-libcxx14', 'Unix Makefiles'),
     Toolchain('android-ndk-r17-api-16-armeabi-v7a-clang-libcxx14', 'Unix Makefiles'),
+    Toolchain('android-ndk-r17-api-16-x86-clang-libcxx14', 'Unix Makefiles'),
+    Toolchain('android-ndk-r17-api-21-x86-64-clang-libcxx14', 'Unix Makefiles'),
+    Toolchain('android-ndk-r17-api-19-armeabi-v7a-neon-hid-sections', 'Unix Makefiles'),
+    Toolchain('android-ndk-r17-api-19-armeabi-v7a-neon-clang-libcxx', 'Unix Makefiles'),
     Toolchain('emscripten-cxx11', 'Unix Makefiles'),
     Toolchain('raspberrypi1-cxx11-pic', 'Unix Makefiles'),
     Toolchain('raspberrypi1-cxx11-pic-static-std', 'Unix Makefiles'),
@@ -386,6 +391,7 @@ if platform.system() == 'Linux':
 if platform.system() == 'Darwin':
   toolchain_table += [
       Toolchain('ios', 'Xcode'),
+      Toolchain('ios-11-4-dep-9-4-arm64', 'Xcode', ios_version='11.4'),
       Toolchain('ios-11-3-dep-9-0-arm64', 'Xcode', ios_version='11.3'),
       Toolchain('ios-11-3-dep-9-0-device-bitcode-cxx11', 'Xcode', ios_version='11.3'),
       Toolchain('ios-11-2-dep-9-0-device-bitcode-cxx11', 'Xcode', ios_version='11.2'),
@@ -517,6 +523,7 @@ if platform.system() == 'Darwin':
       Toolchain('ios-nocodesign-11-3-dep-9-0-bitcode-cxx11', 'Xcode', ios_version='11.3', nocodesign=True),
       Toolchain('ios-nocodesign-11-3-dep-9-0-wo-i386-wo-armv7s-hid-sections', 'Xcode', ios_version='11.3', nocodesign=True),
       Toolchain('ios-nocodesign-11-4-dep-9-0-bitcode-cxx11', 'Xcode', ios_version='11.4', nocodesign=True),
+      Toolchain('ios-nocodesign-dep-9-0-cxx14', 'Xcode', nocodesign=True),
       Toolchain('xcode', 'Xcode'),
       Toolchain('xcode-cxx98', 'Xcode'),
       Toolchain('xcode-nocxx', 'Xcode'),
