@@ -12,6 +12,7 @@ class Toolchain:
       self,
       name,
       generator,
+      toolset='',
       arch='',
       vs_version='',
       ios_version='',
@@ -21,6 +22,7 @@ class Toolchain:
   ):
     self.name = name
     self.generator = generator
+    self.toolset = toolset
     self.arch = arch
     self.vs_version = vs_version
     self.ios_version = ios_version
@@ -125,14 +127,17 @@ toolchain_table = [
     Toolchain('android-ndk-r14b-api-21-mips-clang-libcxx', 'Unix Makefiles'),
     Toolchain('android-ndk-r14b-api-21-x86-clang-libcxx', 'Unix Makefiles'),
     Toolchain('android-ndk-r15c-api-16-armeabi-v7a-neon-clang-libcxx', 'Unix Makefiles'),
+    Toolchain('android-ndk-r15c-api-16-armeabi-v7a-clang-libcxx', 'Unix Makefiles'),
     Toolchain('android-ndk-r15c-api-16-armeabi-clang-libcxx', 'Unix Makefiles'),
     Toolchain('android-ndk-r15c-api-16-mips-clang-libcxx', 'Unix Makefiles'),
     Toolchain('android-ndk-r15c-api-16-x86-clang-libcxx', 'Unix Makefiles'),
     Toolchain('android-ndk-r15c-api-21-arm64-v8a-neon-clang-libcxx', 'Unix Makefiles'),
+    Toolchain('android-ndk-r15c-api-21-arm64-v8a-clang-libcxx', 'Unix Makefiles'),
     Toolchain('android-ndk-r15c-api-21-armeabi-v7a-neon-clang-libcxx', 'Unix Makefiles'),
     Toolchain('android-ndk-r15c-api-21-armeabi-clang-libcxx', 'Unix Makefiles'),
     Toolchain('android-ndk-r15c-api-21-mips-clang-libcxx', 'Unix Makefiles'),
     Toolchain('android-ndk-r15c-api-21-x86-clang-libcxx', 'Unix Makefiles'),
+    Toolchain('android-ndk-r15c-api-21-x86-64-clang-libcxx', 'Unix Makefiles'),
     Toolchain('android-ndk-r15c-api-24-armeabi-v7a-neon-clang-libcxx', 'Unix Makefiles'),
     Toolchain('android-ndk-r16b-api-16-armeabi-v7a-clang-libcxx14', 'Unix Makefiles'),
     Toolchain('android-ndk-r16b-api-16-armeabi-v7a-thumb-clang-libcxx14', 'Unix Makefiles'),
@@ -317,6 +322,13 @@ if os.name == 'nt':
           vs_version='15'
       ),
       Toolchain(
+          'vs-15-2017-win64-llvm',
+          'Visual Studio 15 2017 Win64',
+          toolset='LLVM-vs2014',
+          arch='amd64',
+          vs_version='15'
+      ),
+      Toolchain(
           'vs-15-2017-win64-store-10-zw',
           'Visual Studio 15 2017 Win64',
           arch='amd64',
@@ -393,6 +405,7 @@ if platform.system() == 'Darwin':
       Toolchain('ios', 'Xcode'),
       Toolchain('ios-11-4-dep-9-4-arm64', 'Xcode', ios_version='11.4'),
       Toolchain('ios-11-3-dep-9-0-arm64', 'Xcode', ios_version='11.3'),
+      Toolchain('ios-11-4-dep-9-0-device-bitcode-cxx11', 'Xcode', ios_version='11.4'),
       Toolchain('ios-11-3-dep-9-0-device-bitcode-cxx11', 'Xcode', ios_version='11.3'),
       Toolchain('ios-11-2-dep-9-0-device-bitcode-cxx11', 'Xcode', ios_version='11.2'),
       Toolchain('ios-11-2-dep-9-3-arm64-armv7', 'Xcode', ios_version='11.2'),
