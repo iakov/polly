@@ -403,6 +403,8 @@ if platform.system() == 'Linux':
 if platform.system() == 'Darwin':
   toolchain_table += [
       Toolchain('ios', 'Xcode'),
+      Toolchain('ios-11-4-dep-9-3-arm64', 'Xcode', ios_version='11.4'),
+      Toolchain('ios-11-4-dep-9-3-arm64-armv7', 'Xcode', ios_version='11.4'),
       Toolchain('ios-11-4-dep-9-4-arm64', 'Xcode', ios_version='11.4'),
       Toolchain('ios-11-3-dep-9-0-arm64', 'Xcode', ios_version='11.3'),
       Toolchain('ios-11-4-dep-9-0-device-bitcode-cxx11', 'Xcode', ios_version='11.4'),
@@ -590,6 +592,7 @@ if os.name == 'posix':
       Toolchain('clang-fpic-hid-sections', 'Unix Makefiles'),
       Toolchain('clang-fpic-static-std', 'Unix Makefiles'),
       Toolchain('gcc', 'Unix Makefiles'),
+      Toolchain('gcc-ninja', 'Ninja'),
       Toolchain('gcc-static', 'Unix Makefiles'),
       Toolchain('gcc-static-std', 'Unix Makefiles'),
       Toolchain('gcc-musl', 'Unix Makefiles'),
