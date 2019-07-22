@@ -38,6 +38,8 @@ if(CMAKE_VERSION VERSION_LESS 3.7.1)
   )
 endif()
 
+include("${ANDROID_NDK}/build/cmake/android.toolchain.cmake")
+
 macro(find_host_program)
  set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
  set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY NEVER)
