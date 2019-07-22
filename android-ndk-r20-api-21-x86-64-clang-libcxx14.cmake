@@ -13,7 +13,7 @@ include("${CMAKE_CURRENT_LIST_DIR}/utilities/polly_clear_environment_variables.c
 
 include("${CMAKE_CURRENT_LIST_DIR}/utilities/polly_init.cmake")
 
-set(ANDROID_NDK_VERSION "r17")
+set(ANDROID_NDK_VERSION "r20")
 set(CMAKE_SYSTEM_VERSION "21")
 set(CMAKE_ANDROID_ARCH_ABI "x86_64")
 set(CMAKE_ANDROID_NDK_TOOLCHAIN_VERSION "clang")
