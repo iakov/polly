@@ -38,6 +38,7 @@ if(CMAKE_VERSION VERSION_LESS 3.7.1)
   )
 endif()
 
+set(ANDROID_ABI ${CMAKE_ANDROID_ARCH_ABI})
 include("${ANDROID_NDK}/build/cmake/android.toolchain.cmake")
 
 macro(find_host_program)
