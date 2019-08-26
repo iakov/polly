@@ -19,7 +19,6 @@ polly_init(
     "iOS ${IOS_SDK_VERSION} / Deployment ${IOS_DEPLOYMENT_SDK_VERSION} / Universal (iphoneos + iphonesimulator) / \
 ${POLLY_XCODE_COMPILER} / \
 No code sign / \
-bitcode / \
 c++11 support"
     "Xcode"
 )
@@ -35,10 +34,10 @@ set(CMAKE_MACOSX_BUNDLE YES)
 
 include("${CMAKE_CURRENT_LIST_DIR}/flags/ios_nocodesign.cmake")
 
-set(IPHONEOS_ARCHS armv7;arm64)
-set(IPHONESIMULATOR_ARCHS)
+set(IPHONEOS_ARCHS "")
+set(IPHONESIMULATOR_ARCHS x86_64)
 
 include("${CMAKE_CURRENT_LIST_DIR}/compiler/xcode.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/os/iphone.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/flags/cxx11.cmake")
-include("${CMAKE_CURRENT_LIST_DIR}/flags/bitcode.cmake") # after os/iphone.cmake
+#include("${CMAKE_CURRENT_LIST_DIR}/flags/bitcode.cmake") # after os/iphone.cmake
