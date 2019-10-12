@@ -11,7 +11,7 @@ include("${CMAKE_CURRENT_LIST_DIR}/utilities/polly_clear_environment_variables.c
 
 include("${CMAKE_CURRENT_LIST_DIR}/utilities/polly_init.cmake")
 
-set(IOS_SDK_VERSION 13.0)
+set(IOS_SDK_VERSION 13.1)
 set(IOS_DEPLOYMENT_SDK_VERSION 11)
 set(CMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH NO)
 set(CMAKE_IOS_INSTALL_COMBINED YES)
@@ -37,7 +37,7 @@ set(CMAKE_MACOSX_BUNDLE YES)
 
 include("${CMAKE_CURRENT_LIST_DIR}/flags/ios_nocodesign.cmake")
 
-set(IPHONEOS_ARCHS armv7s;arm64)
+set(IPHONEOS_ARCHS arm64)
 set(IPHONESIMULATOR_ARCHS x86_64)
 
 include("${CMAKE_CURRENT_LIST_DIR}/compiler/xcode.cmake")
