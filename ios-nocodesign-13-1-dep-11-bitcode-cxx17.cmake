@@ -1,10 +1,10 @@
 # Copyright (c) 2017, Ruslan Baratov
 # All rights reserved.
 
-if(DEFINED POLLY_IOS_NOCODESIGN_13_0_DEP_11_BITCODE_CXX14_CMAKE_)
+if(DEFINED POLLY_IOS_NOCODESIGN_13_1_DEP_11_BITCODE_CXX17_CMAKE_)
   return()
 else()
-  set(POLLY_IOS_NOCODESIGN_13_0_DEP_11_BITCODE_CXX14_CMAKE_ 1)
+  set(POLLY_IOS_NOCODESIGN_13_1_DEP_11_BITCODE_CXX17_CMAKE_ 1)
 endif()
 
 include("${CMAKE_CURRENT_LIST_DIR}/utilities/polly_clear_environment_variables.cmake")
@@ -22,7 +22,7 @@ polly_init(
 ${POLLY_XCODE_COMPILER} / \
 No code sign / \
 bitcode / \
-c++14 support"
+c++17 support"
     "Xcode"
 )
 
@@ -42,5 +42,5 @@ set(IPHONESIMULATOR_ARCHS x86_64)
 
 include("${CMAKE_CURRENT_LIST_DIR}/compiler/xcode.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/os/iphone.cmake")
-include("${CMAKE_CURRENT_LIST_DIR}/flags/cxx14.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/flags/cxx17.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/flags/bitcode.cmake") # after os/iphone.cmake
