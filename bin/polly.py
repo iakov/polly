@@ -172,7 +172,7 @@ parser.add_argument(
 parser.add_argument(
     '--iossim',
     action='store_true',
-    help="Build for ios i386 simulator"
+    help="Build for ios simulator"
 )
 
 parser.add_argument(
