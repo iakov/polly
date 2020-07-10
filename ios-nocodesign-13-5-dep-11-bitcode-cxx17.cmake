@@ -1,17 +1,18 @@
 # Copyright (c) 2017, Ruslan Baratov
+# Copyright (c) 2020, Iakov Kirilenko
 # All rights reserved.
 
-if(DEFINED POLLY_IOS_NOCODESIGN_13_4_DEP_11_BITCODE_CXX17_CMAKE_)
+if(DEFINED POLLY_IOS_NOCODESIGN_13_5_DEP_11_BITCODE_CXX17_CMAKE_)
   return()
 else()
-  set(POLLY_IOS_NOCODESIGN_13_4_DEP_11_BITCODE_CXX17_CMAKE_ 1)
+  set(POLLY_IOS_NOCODESIGN_13_5_DEP_11_BITCODE_CXX17_CMAKE_ 1)
 endif()
 
 include("${CMAKE_CURRENT_LIST_DIR}/utilities/polly_clear_environment_variables.cmake")
 
 include("${CMAKE_CURRENT_LIST_DIR}/utilities/polly_init.cmake")
 
-set(IOS_SDK_VERSION 13.4)
+set(IOS_SDK_VERSION 13.5)
 set(IOS_DEPLOYMENT_SDK_VERSION 11)
 set(CMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH NO)
 set(CMAKE_IOS_INSTALL_COMBINED YES)
