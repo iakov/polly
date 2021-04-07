@@ -12,11 +12,12 @@ include("${CMAKE_CURRENT_LIST_DIR}/utilities/polly_clear_environment_variables.c
 
 include("${CMAKE_CURRENT_LIST_DIR}/utilities/polly_init.cmake")
 
+# Fix CMAKE 20 problem
+set(CMAKE_GENERATOR_TOOLSET "buildsystem=1")
 set(IOS_SDK_VERSION 14.4)
 set(IOS_DEPLOYMENT_SDK_VERSION 11)
 set(CMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH NO)
 set(CMAKE_IOS_INSTALL_COMBINED YES)
-
 set(POLLY_XCODE_COMPILER "clang")
 polly_init(
     "iOS ${IOS_SDK_VERSION} / Deployment ${IOS_DEPLOYMENT_SDK_VERSION} / Universal (iphoneos + iphonesimulator) / \
